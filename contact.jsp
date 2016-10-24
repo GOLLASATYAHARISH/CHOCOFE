@@ -31,7 +31,7 @@
 						fax= 456-789-984.
 					</address>
 					<p>
-					mail us &nbrs<a href="http://www.gmail.com"><span
+					mail us <a href="http://www.gmail.com"><span
 							class="glyphicon glyphicon-envelope"></span></a>
 					</p>
 				</div>
