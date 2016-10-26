@@ -10,12 +10,24 @@ public class ControlMethods {
 
 	
 	@RequestMapping("/login")
-	public String login(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
+	public String login(@RequestParam(value = "userForm", required = false, defaultValue = "World") String name,
 			Model model) {
 
-		model.addAttribute("name", name);
+		model.addAttribute("userForm", name);
 		// returns the view name
 		return "login";
+
+	}
+	
+	
+	
+	@RequestMapping("/result")
+	public String Cart(@RequestParam(value = "userForm", required = false, defaultValue = "World") String name,
+			Model model) {
+
+		model.addAttribute("userForm", name);
+		// returns the view name
+		return "result";
 
 	}
 	
@@ -30,13 +42,26 @@ public class ControlMethods {
 	}
 
 	@RequestMapping("/register")
-	public String signin(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
-			Model model) {
-
-		model.addAttribute("name", name);
-		// returns the view name
-		return "register";
-	}
+	@RequestMapping(method = RequestMethod.GET)
+      public String viewRegistration(Map<String, Object> model) {
+        RegisterModel userForm = new RegisterModel();    
+        model.put("userForm", userForm);
+       
+         
+        return "register";
+    }
+    
+     
+       @RequestMapping(method = RequestMethod.POST)
+    public String processRegistration(@ModelAttribute("userForm")RegisterModel
+    		r) { 
+        return "index";
+    }
+	
+	
+	
+	
+	
 
 	@RequestMapping("/index")
 	public String home(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
