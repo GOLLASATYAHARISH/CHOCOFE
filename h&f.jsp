@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <title>about us</title>
   <meta charset="utf-8">
@@ -14,7 +13,7 @@
 <body style="background-color:#cccccc;">
 	<div class="container-fluid">
 		<div class="row">
-			</class>
+			<div>
 			<div class="col-md-3">
 			   <div class="jumbotron text-center"><center>
 				<div class="img-circle" alt="Cinque Terre">
@@ -42,7 +41,7 @@
 			<a class="navbar-brand" href="index">CHOCO</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="index">Home</a></li>
+			<li ><a href="index">Home</a></li>  <!-- active the click --->
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="products.jsp">products <span
 					class="caret"></span></a>
@@ -64,4 +63,4 @@
 	</div>
 	</nav>
 </body>
-</html>
+</html>	
