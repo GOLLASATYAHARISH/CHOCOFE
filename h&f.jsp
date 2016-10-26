@@ -60,6 +60,19 @@
 			<li><a href="login"><span
 					class="glyphicon glyphicon-log-in"></span> Login</a></li>
 		</ul>
+		<!--     <c:if test="${empty userForm}">
+			
+			<li><a href="register"><span
+					class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			<li><a href="login"><span
+					class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		</c:if>
+		<c:if test="${not empty userForm}">
+		  <li><a href="result" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> My Items</a></li>
+           <li><a href="index" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+           </c:if>-->
+		
+		
 	</div>
 	</nav>
 </body>
