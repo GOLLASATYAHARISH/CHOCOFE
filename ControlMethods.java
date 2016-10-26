@@ -28,16 +28,23 @@ public class ControlMethods {
 		return "about";
 
 	}
-
-	@RequestMapping("/register")
-	public String signin(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
-			Model model) {
-
-		model.addAttribute("name", name);
-		// returns the view name
-		return "register";
+	@RequestMapping(value = "/register")
+	 @RequestMapping(method = RequestMethod.GET)
+	    public String viewRegistration(Map<String, Object> model) {
+	       RegisterModel userForm = new  RegisterModel();    
+	        model.put("userForm", userForm);   
+	        return "register";
+	    }
+	    
+	     
+	    @RequestMapping(method = RequestMethod.POST)
+	    public String processRegistration(@ModelAttribute("userForm") RegisterModel r,
+	            Map<String, Object> model) {
+	       
+	        return "dao";
+	    }
 	}
-
+	
 	@RequestMapping("/index")
 	public String home(@RequestParam(value = "name", required = false, defaultValue = "World") String name,
 			Model model) {
